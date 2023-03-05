@@ -60,6 +60,25 @@ def login():
         return render_template('/login.html', error='Error al ejecutar la consulta a la base de datos')
 
 
+#Registro de la base de datos
+@app.route('/registro', methods=['GET', 'POST'])
+def registro():
+    if request.method == 'POST':
+        # Aquí es donde se procesa el formulario de registro y se guardan los datos en la base de datos
+        nombre_usuario = request.form['nombre_usuario']
+        correo = request.form['correo']
+        contrasena = request.form['contrasena']
+        
+        # Aquí debes insertar los datos en tu base de datos utilizando una consulta SQL
+        # Ejemplo:
+        # cursor.execute("INSERT INTO usuarios (nombre_usuario, correo, contrasena) VALUES (%s, %s, %s)", (nombre_usuario, correo, contrasena))
+        # db.commit()
+        
+        return redirect(url_for('inicio')) # Después de procesar el formulario, redirigir al usuario a la página de inicio
+
+    return render_template('registro.html') # Si el método HTTP es GET, renderizar el formulario de registro
+
+
 
 if __name__ == "__main__":
     app.run(port=4000, host="0.0.0.0")

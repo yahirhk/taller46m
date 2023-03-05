@@ -5,6 +5,51 @@
   font-family: sans-serif;
 
 }
+/*Estilo del login*/
+.login-box {
+    max-width: 400px;
+    margin: 0 auto;
+    border: none;
+    padding: 20px;
+    background-image: radial-gradient(circle at 50% 50%, #0062ff 0, #005aff 25%, #464ff9 50%, #7242ee 75%, #9032e2 100%);
+    position: relative;
+    top: 150px;
+    left: 15px;
+  }
+  
+  .login-box form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-box label {
+    margin-bottom: 10px;
+  }
+  
+  .login-box input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .login-box button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+
+.body {
+  background-image: url('https://fondosmil.com/fondo/489.jpg');
+  background-size: cover;
+  background-position: auto;
+  background-repeat: no-repeat;
+}
+
+
+/*Estilos de las paginas*/
 .cuerpo{
     background-color: black;
 }
